@@ -1,0 +1,13 @@
+name: banking_reconciliation
+version: '1.0.0'
+config-version: 2
+profile: banking_reconciliation
+model-paths: [models]
+seed-paths: [seeds]
+test-paths: [tests]
+models:
+  banking_reconciliation:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
